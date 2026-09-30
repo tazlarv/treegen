@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DLL - Debug|x64">
+      <Configuration>DLL - Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DLL - Release|x64">
+      <Configuration>DLL - Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="LIB - Debug|x64">
+      <Configuration>LIB - Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="LIB - Release|x64">
+      <Configuration>LIB - Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='LIB - Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL - Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_XML_LIB;QT_OPENGL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">TREEGEN_AS_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_XML_LIB;QT_OPENGL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtOpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtOpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">
+      </DebugInformationFormat>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">
+      </DebugInformationFormat>
+      <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">true</TreatWChar_tAsBuiltInType>
+      <TreatWChar_tAsBuiltInType Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">true</WholeProgramOptimization>
+      <WholeProgramOptimization Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">true</WholeProgramOptimization>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">Fast</FloatingPointModel>
+      <FloatingPointModel Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">Fast</FloatingPointModel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">Level4</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">Level4</WarningLevel>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">MaxSpeed</Optimization>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">false</BrowseInformation>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">false</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">Windows</SubSystem>
+      <SubSystem Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">Windows</SubSystem>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">$(SolutionDir)External libraries\Lib\Release;$(SolutionDir)External libraries\Lib\Shared;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">$(SolutionDir)External libraries\Lib\Release;$(SolutionDir)External libraries\Lib\Shared;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">false</GenerateDebugInformation>
+      <GenerateDebugInformation Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">false</GenerateDebugInformation>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">tbb.lib;qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;%(AdditionalDependencies);Qt5Concurrent.lib;Qt5Xml.lib;Qt5OpenGL.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">tbb.lib;qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;%(AdditionalDependencies);Qt5Concurrent.lib;Qt5Xml.lib;Qt5OpenGL.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+      <LinkTimeCodeGeneration Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <LinkTimeCodeGeneration Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <Profile Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">true</Profile>
+      <Profile Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">true</Profile>
+      <EntryPointSymbol Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">
+      </EntryPointSymbol>
+    </Link>
+    <QtMoc>
+      <InputFile Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">%(FullPath)</InputFile>
+      <InputFile Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">%(FullPath)</InputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">output</DynamicSource>
+      <DynamicSource Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">output</DynamicSource>
+      <ExecutionDescription Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">Moc'ing %(Identity)...</ExecutionDescription>
+      <ExecutionDescription Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtOpenGL;%(AdditionalIncludeDirectories)</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtOpenGL;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_XML_LIB;QT_OPENGL_LIB;%(PreprocessorDefinitions)</Define>
+      <Define Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">TREEGEN_AS_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_XML_LIB;QT_OPENGL_LIB;%(PreprocessorDefinitions)</Define>
+      <QTDIR Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">$(QTDIR)</QTDIR>
+      <QTDIR Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">$(QTDIR)</QTDIR>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">stdafx.h;../../%(Filename)%(Extension)</ForceInclude>
+      <ForceInclude Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">stdafx.h;../../%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">Uic'ing %(Identity)...</ExecutionDescription>
+      <ExecutionDescription Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">Rcc'ing %(Identity)...</ExecutionDescription>
+      <ExecutionDescription Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+    </QtRcc>
+    <PostBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">xcopy /y /d "$(SolutionDir)External libraries\Bin\Shared\embree3.dll" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Release\tbb.dll" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Release\tbb.pdb" "$(OutDir)"
+</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">xcopy /y /d "$(SolutionDir)External libraries\Bin\Shared\embree3.dll" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Release\tbb.dll" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Release\tbb.pdb" "$(OutDir)"
+</Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">true</PreserveSbr>
+      <PreserveSbr Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='LIB - Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <TargetName>TreeGen</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL - Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <TargetName>TreeGen</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <TargetName>TreeGen</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <TargetName>TreeGen</TargetName>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='LIB - Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL - Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='LIB - Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_XML_LIB;QT_OPENGL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtOpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level4</WarningLevel>
+      <BrowseInformation>false</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)External libraries\Lib\Debug;$(SolutionDir)External libraries\Lib\Shared;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>tbb_debug.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;%(AdditionalDependencies);Qt5Concurrentd.lib;Qt5Xmld.lib;Qt5OpenGLd.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtOpenGL;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_XML_LIB;QT_OPENGL_LIB;%(PreprocessorDefinitions)</Define>
+      <ForceInclude>stdafx.h;../../%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+    </QtRcc>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(SolutionDir)External libraries\Bin\Shared\embree3.dll" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Release\tbb.dll" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Release\tbb.pdb" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Debug\tbb_debug.dll" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Debug\tbb_debug.pdb" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DLL - Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>TREEGEN_AS_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_XML_LIB;QT_OPENGL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtOpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level4</WarningLevel>
+      <BrowseInformation>false</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)External libraries\Lib\Debug;$(SolutionDir)External libraries\Lib\Shared;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>tbb_debug.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;%(AdditionalDependencies);Qt5Concurrentd.lib;Qt5Xmld.lib;Qt5OpenGLd.lib;opengl32.lib;glu32.lib</AdditionalDependencies>
+    </Link>
+    <QtMoc>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <IncludePath>$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtOpenGL;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>TREEGEN_AS_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_XML_LIB;QT_OPENGL_LIB;%(PreprocessorDefinitions)</Define>
+      <ForceInclude>stdafx.h;../../%(Filename)%(Extension)</ForceInclude>
+    </QtMoc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+    </QtUic>
+    <QtRcc>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+    </QtRcc>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(SolutionDir)External libraries\Bin\Shared\embree3.dll" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Release\tbb.dll" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Release\tbb.pdb" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Debug\tbb_debug.dll" "$(OutDir)"
+xcopy /y /d "$(SolutionDir)External libraries\Bin\Debug\tbb_debug.pdb" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Source files\Camera\camera_utils.cpp" />
+    <ClCompile Include="Source files\Camera\scene_camera.cpp" />
+    <ClCompile Include="treegen_app.cpp" />
+    <ClCompile Include="Source files\Utilities\openGL_utils.cpp" />
+    <ClCompile Include="tree_renderGL_widget.cpp" />
+    <ClCompile Include="Source files\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='LIB - Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL - Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="tree_renderGL_widget.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='LIB - Debug|x64'">$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='DLL - Debug|x64'">$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='LIB - Debug|x64'">TREEGEN_AS_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB</Define>
+      <Define Condition="'$(Configuration)|$(Platform)'=='DLL - Debug|x64'">TREEGEN_AS_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">$(SolutionDir)GUI\Header files;$(SolutionDir)Generator\Header files\Library interface;$(SolutionDir)External libraries\Include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtConcurrent</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='LIB - Release|x64'">TREEGEN_AS_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB</Define>
+      <Define Condition="'$(Configuration)|$(Platform)'=='DLL - Release|x64'">TREEGEN_AS_DLL;UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB</Define>
+    </QtMoc>
+    <QtMoc Include="treegen_app.h" />
+    <ClInclude Include="Header files\Camera\camera_utils.h" />
+    <ClInclude Include="Header files\Camera\scene_camera.h" />
+    <ClInclude Include="Header files\Utilities\glm_qt_utils.h" />
+    <ClInclude Include="Header files\Utilities\openGL_utils.h" />
+    <ClInclude Include="Header files\Treegen management\treegen_management.h" />
+    <ClInclude Include="Header files\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="treegen_gui.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="treegen_gui.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Generator\Generator.vcxproj">
+      <Project>{8b0088f9-0b9b-4706-a0f3-ec9077e2a4e1}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\trees_icon.ico" />
+    <Image Include="trees_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GUI.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="msvc2017_64" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

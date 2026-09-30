@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="/treegen_gui">
+    <file>shaders/TreeGen mesh.fs</file>
+    <file>shaders/TreeGen mesh.vs</file>
+    <file>shaders/TreeGen structure.fs</file>
+    <file>shaders/TreeGen structure.vs</file>
+    <file>Resources/trees_icon.ico</file>
+  </qresource>
+</RCC>
