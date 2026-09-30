@@ -1,8 +1,6 @@
 # Procedural Tree Generation
 
-<img height="300" alt="image" src="https://github.com/user-attachments/assets/b8db5921-3565-46b2-a9cd-d7c9ed2130e4" />
-<img height="300" alt="image" src="https://github.com/user-attachments/assets/c625b875-77f5-4c42-b14d-1c8fc8911838" />
-<img height="300" alt="image" src="https://github.com/user-attachments/assets/24a4d3b5-6f10-464d-9855-f774f263b827" />
+<img width="100%" alt="combined-image" src="https://github.com/user-attachments/assets/5023e54a-0d63-4276-9b18-83bae69c86ba" />
 
 ## About
 
